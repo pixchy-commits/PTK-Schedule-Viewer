@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { validateTimetableParams } from "@/utils/validation";
+// import { ValidationResponse } from "@/types/timetable";
 
 /**
  * API route handler for validating a grade and class combination

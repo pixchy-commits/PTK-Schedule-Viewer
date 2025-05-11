@@ -1,3 +1,6 @@
+import * as fs from 'fs';
+import { ValidationResult } from '@/types/timetable';
+
 /**
  * Validate grade and class parameters
  * 
@@ -5,10 +8,7 @@
  * @param classNumber Class number
  * @returns Object containing validation result and error message if any
  */
-export function validateTimetableParams(grade: number, classNumber: number): {
-  isValid: boolean;
-  errorMessage?: string;
-} {
+export function validateTimetableParams(grade: number, classNumber: number): ValidationResult{
   // Check if grade is valid (1-6)
   if (isNaN(grade) || grade < 1 || grade > 6) {
     return {
@@ -40,11 +40,11 @@ export function validateTimetableParams(grade: number, classNumber: number): {
 /**
  * Check if the timetable CSV file exists and is accessible
  * 
+ * @param filePath Path to the CSV file
  * @returns Boolean indicating if the file is accessible
  */
-export function checkTimetableFileExists(filePath: string): boolean {
+export function isTimetableFileAccessible(filePath: string): boolean {
   try {
-    const fs = require('fs');
     return fs.existsSync(filePath);
   } catch (error) {
     console.error('Error checking timetable file:', error);

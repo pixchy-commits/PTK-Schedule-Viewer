@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import { TimetableData } from '@/types/timetable';
 
 /**
  * Parse a CSV file into a structured timetable object
@@ -67,10 +68,4 @@ export function getTimetableForClass(grade: number, classNumber: number): Timeta
   return filteredData;
 }
 
-/**
- * Types for timetable data
- */
-export interface TimetableData {
-  headers: string[];
-  data: Record<string, string>[];
-}
+// Note: TimetableData interface is now imported from '@/types/timetable'

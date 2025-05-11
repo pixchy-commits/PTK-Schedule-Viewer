@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getTimetableForClass } from "@/utils/csvParser";
 import { validateTimetableParams } from "@/utils/validation";
+import { TimetableEntry, TimetableByDayResponse } from "@/types/timetable";
 import path from "path";
 import fs from "fs";
 
@@ -57,22 +58,14 @@ export async function GET(
   });
 }
 
-/**
- * Type for a timetable entry
- */
-interface TimetableEntry {
-  period: number;
-  subject: string;
-  teacher: string;
-  room: string;
-}
+// Using TimetableEntry type from '@/types/timetable'
 
 /**
  * Format the timetable data into a more structured response
  */
-function formatTimetableResponse(data: Record<string, string>[]) {
+function formatTimetableResponse(data: Record<string, string>[]): TimetableByDayResponse {
   // Group by day
-  const groupedByDay: Record<string, TimetableEntry[]> = {};
+  const groupedByDay: TimetableByDayResponse = {};
   
   data.forEach(entry => {
     const day = entry.day;

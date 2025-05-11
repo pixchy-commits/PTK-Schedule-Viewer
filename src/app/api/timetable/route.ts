@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { parseCSV } from "@/utils/csvParser";
+// import { TimetableOverviewResponse } from "@/types/timetable";
 import path from "path";
 import fs from "fs";
 
