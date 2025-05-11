@@ -24,18 +24,92 @@ Friday,2,Physical Education,Mr. Wilson,Gym,1,1
 Friday,3,English,Ms. Johnson,102,1,1
 Friday,4,Mathematics,Mr. Smith,101,1,1
 Friday,5,Club Activities,Various,Various,1,1
+
 Monday,1,Science,Ms. Clark,201,1,2
 Monday,2,Mathematics,Mr. Thomas,202,1,2
 Monday,3,English,Ms. White,203,1,2
 Monday,4,Thai Language,Mr. Pongsak,204,1,2
 Monday,5,Physical Education,Mrs. Hall,Gym,1,2
-Monday,1,Mathematics,Dr. Anderson,301,2,1
-Monday,2,Chemistry,Ms. Martinez,Lab3,2,1
-Monday,3,English Literature,Mr. Robinson,302,2,1
-Monday,4,History,Dr. Scott,303,2,1
+Tuesday,1,Computer Science,Dr. Chen,Lab1,1,2
+Tuesday,2,Mathematics,Mr. Thomas,202,1,2
+Tuesday,3,Social Studies,Ms. Nguyen,205,1,2
+Tuesday,4,Thai Language,Mr. Pongsak,204,1,2
+Tuesday,5,Arts,Mrs. Adams,Art Room,1,2
+Wednesday,1,English,Ms. White,203,1,2
+Wednesday,2,Mathematics,Mr. Thomas,202,1,2
+Wednesday,3,Science,Ms. Clark,201,1,2
+Wednesday,4,Music,Mr. Brooks,Music Room,1,2
+Wednesday,5,Reading,Mrs. Stevens,Library,1,2
+Thursday,1,Mathematics,Mr. Thomas,202,1,2
+Thursday,2,English,Ms. White,203,1,2
+Thursday,3,Arts,Mrs. Adams,Art Room,1,2
+Thursday,4,Thai Language,Mr. Pongsak,204,1,2
+Thursday,5,Health Education,Dr. Foster,206,1,2
+Friday,1,Science Lab,Ms. Clark,Lab2,1,2
+Friday,2,Physical Education,Mrs. Hall,Gym,1,2
+Friday,3,Mathematics,Mr. Thomas,202,1,2
+Friday,4,English,Ms. White,203,1,2
+Friday,5,Club Activities,Various,Various,1,2
+
+Monday,1,Thai Language,Mr. Somsak,301,2,1
+Monday,2,Mathematics,Dr. Anderson,302,2,1
+Monday,3,Chemistry,Ms. Martinez,Lab3,2,1
+Monday,4,English Literature,Mr. Robinson,303,2,1
 Monday,5,Computer Science,Ms. Turner,Lab1,2,1
-Monday,1,Physics,Dr. Thompson,401,4,1
-Monday,2,Advanced Mathematics,Ms. Parker,402,4,1
-Monday,3,English,Mr. Nelson,403,4,1
-Monday,4,Social Science,Dr. Baker,404,4,1
-Monday,5,Thai Language,Mrs. Siriwan,405,4,1
+Tuesday,1,History,Dr. Scott,304,2,1
+Tuesday,2,Mathematics,Dr. Anderson,302,2,1
+Tuesday,3,Physics,Mrs. Cooper,Lab4,2,1
+Tuesday,4,Thai Language,Mr. Somsak,301,2,1
+Tuesday,5,Arts,Ms. Rivera,Art Room,2,1
+Wednesday,1,English Literature,Mr. Robinson,303,2,1
+Wednesday,2,Chemistry,Ms. Martinez,Lab3,2,1
+Wednesday,3,Mathematics,Dr. Anderson,302,2,1
+Wednesday,4,Physical Education,Mr. Reed,Gym,2,1
+Wednesday,5,Social Studies,Dr. Morgan,305,2,1
+Thursday,1,Physics,Mrs. Cooper,Lab4,2,1
+Thursday,2,Mathematics,Dr. Anderson,302,2,1
+Thursday,3,Thai Language,Mr. Somsak,301,2,1
+Thursday,4,English Literature,Mr. Robinson,303,2,1
+Thursday,5,Computer Programming,Ms. Turner,Lab1,2,1
+Friday,1,Chemistry Lab,Ms. Martinez,Lab3,2,1
+Friday,2,Mathematics,Dr. Anderson,302,2,1
+Friday,3,Physics,Mrs. Cooper,Lab4,2,1
+Friday,4,Thai Language,Mr. Somsak,301,2,1
+Friday,5,Club Activities,Various,Various,2,1
+
+Monday,1,English Literature,Mrs. Bell,401,3,5
+Monday,2,Advanced Mathematics,Dr. Patel,402,3,5
+Monday,3,Biology,Ms. Collins,Lab5,3,5
+Monday,4,Thai Language,Mr. Chai,403,3,5
+Monday,5,History,Dr. Lopez,404,3,5
+Tuesday,1,Chemistry,Mr. Freeman,Lab6,3,5
+Tuesday,2,English Literature,Mrs. Bell,401,3,5
+Tuesday,3,Advanced Mathematics,Dr. Patel,402,3,5
+Tuesday,4,Computer Science,Ms. Richardson,Lab1,3,5
+Tuesday,5,Physical Education,Mr. Murphy,Gym,3,5
+Wednesday,1,Thai Language,Mr. Chai,403,3,5
+Wednesday,2,Biology,Ms. Collins,Lab5,3,5
+Wednesday,3,Advanced Mathematics,Dr. Patel,402,3,5
+Wednesday,4,English Literature,Mrs. Bell,401,3,5
+Wednesday,5,Social Studies,Dr. Henderson,405,3,5
+Thursday,1,Chemistry,Mr. Freeman,Lab6,3,5
+Thursday,2,Advanced Mathematics,Dr. Patel,402,3,5
+Thursday,3,Thai Language,Mr. Chai,403,3,5
+Thursday,4,Biology,Ms. Collins,Lab5,3,5
+Thursday,5,Arts,Mrs. Coleman,Art Room,3,5
+Friday,1,English Literature,Mrs. Bell,401,3,5
+Friday,2,Advanced Mathematics,Dr. Patel,402,3,5
+Friday,3,Biology Lab,Ms. Collins,Lab5,3,5
+Friday,4,Chemistry,Mr. Freeman,Lab6,3,5
+Friday,5,Club Activities,Various,Various,3,5
+
+Monday,1,Physics,Dr. Thompson,501,4,1
+Monday,2,Advanced Mathematics,Ms. Parker,502,4,1
+Monday,3,English,Mr. Nelson,503,4,1
+Monday,4,Social Science,Dr. Baker,504,4,1
+Monday,5,Thai Language,Mrs. Siriwan,505,4,1
+Tuesday,1,Chemistry,Dr. Hayes,Lab7,4,1
+Tuesday,2,Advanced Mathematics,Ms. Parker,502,4,1
+Tuesday,3,Computer Programming,Mr. Graham,Lab1,4,1
+Tuesday,4,Thai Literature,Mrs. Siriwan,505,4,1
+Tuesday,5,Physics Lab,Dr. Thompson,Lab8,4,1
