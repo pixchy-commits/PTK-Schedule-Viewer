@@ -113,3 +113,70 @@ Tuesday,2,Advanced Mathematics,Ms. Parker,502,4,1
 Tuesday,3,Computer Programming,Mr. Graham,Lab1,4,1
 Tuesday,4,Thai Literature,Mrs. Siriwan,505,4,1
 Tuesday,5,Physics Lab,Dr. Thompson,Lab8,4,1
+Wednesday,1,English,Mr. Nelson,503,4,1
+Wednesday,2,Advanced Mathematics,Ms. Parker,502,4,1
+Wednesday,3,Biology,Dr. Russell,Lab9,4,1
+Wednesday,4,Social Science,Dr. Baker,504,4,1
+Wednesday,5,Physical Education,Ms. Torres,Gym,4,1
+Thursday,1,Thai Language,Mrs. Siriwan,505,4,1
+Thursday,2,Chemistry Lab,Dr. Hayes,Lab7,4,1
+Thursday,3,Advanced Mathematics,Ms. Parker,502,4,1
+Thursday,4,English Literature,Mr. Nelson,503,4,1
+Thursday,5,Career Guidance,Various,506,4,1
+Friday,1,Biology,Dr. Russell,Lab9,4,1
+Friday,2,Advanced Mathematics,Ms. Parker,502,4,1
+Friday,3,Physics,Dr. Thompson,501,4,1
+Friday,4,Thai Literature,Mrs. Siriwan,505,4,1
+Friday,5,Special Projects,Various,Various,4,1
+
+Monday,1,Calculus,Dr. Price,601,5,8
+Monday,2,Advanced Chemistry,Ms. Edwards,Lab10,5,8
+Monday,3,Thai Advanced,Mr. Rattana,602,5,8
+Monday,4,English Literature,Mrs. Foster,603,5,8
+Monday,5,World History,Dr. Newman,604,5,8
+Tuesday,1,Advanced Physics,Mr. Howard,Lab11,5,8
+Tuesday,2,Calculus,Dr. Price,601,5,8
+Tuesday,3,Computer Science,Ms. Yang,Lab1,5,8
+Tuesday,4,English Literature,Mrs. Foster,603,5,8
+Tuesday,5,Advanced Biology,Dr. Simmons,Lab12,5,8
+Wednesday,1,Thai Advanced,Mr. Rattana,602,5,8
+Wednesday,2,Calculus,Dr. Price,601,5,8
+Wednesday,3,Advanced Chemistry,Ms. Edwards,Lab10,5,8
+Wednesday,4,Physical Education,Mr. Butler,Gym,5,8
+Wednesday,5,Social Sciences,Dr. Cox,605,5,8
+Thursday,1,Advanced Physics,Mr. Howard,Lab11,5,8
+Thursday,2,Calculus,Dr. Price,601,5,8
+Thursday,3,Thai Advanced,Mr. Rattana,602,5,8
+Thursday,4,Advanced Biology,Dr. Simmons,Lab12,5,8
+Thursday,5,Research Methods,Various,606,5,8
+Friday,1,English Literature,Mrs. Foster,603,5,8
+Friday,2,Calculus,Dr. Price,601,5,8
+Friday,3,Career Preparation,Various,607,5,8
+Friday,4,Advanced Physics Lab,Mr. Howard,Lab11,5,8
+Friday,5,Special Projects,Various,Various,5,8
+
+Monday,1,Advanced Calculus,Dr. Wallace,701,6,10
+Monday,2,Research Project,Dr. Palmer,702,6,10
+Monday,3,English Academic,Mr. Mitchell,703,6,10
+Monday,4,Thai Advanced,Mrs. Porntip,704,6,10
+Monday,5,University Preparation,Various,705,6,10
+Tuesday,1,Advanced Physics,Dr. Crawford,Lab13,6,10
+Tuesday,2,Advanced Calculus,Dr. Wallace,701,6,10
+Tuesday,3,Advanced Chemistry,Mrs. Bryant,Lab14,6,10
+Tuesday,4,Thai Advanced,Mrs. Porntip,704,6,10
+Tuesday,5,Computer Science Advanced,Dr. Wong,Lab1,6,10
+Wednesday,1,English Academic,Mr. Mitchell,703,6,10
+Wednesday,2,Advanced Calculus,Dr. Wallace,701,6,10
+Wednesday,3,Research Project,Dr. Palmer,702,6,10
+Wednesday,4,Advanced Biology,Ms. Perry,Lab15,6,10
+Wednesday,5,Physical Education,Mr. Jenkins,Gym,6,10
+Thursday,1,Advanced Chemistry,Mrs. Bryant,Lab14,6,10
+Thursday,2,Advanced Calculus,Dr. Wallace,701,6,10
+Thursday,3,Thai Advanced,Mrs. Porntip,704,6,10
+Thursday,4,English Academic,Mr. Mitchell,703,6,10
+Thursday,5,Career Seminar,Various,706,6,10
+Friday,1,Advanced Physics,Dr. Crawford,Lab13,6,10
+Friday,2,Advanced Calculus,Dr. Wallace,701,6,10
+Friday,3,University Interview Preparation,Various,707,6,10
+Friday,4,Advanced Biology,Ms. Perry,Lab15,6,10
+Friday,5,Special Projects,Various,Various,6,10
