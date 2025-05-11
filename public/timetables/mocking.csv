@@ -1,0 +1,41 @@
+day,period,subject,teacher,room,grade,class
+Monday,1,Mathematics,Mr. Smith,101,1,1
+Monday,2,English,Ms. Johnson,102,1,1
+Monday,3,Science,Dr. Brown,103,1,1
+Monday,4,History,Mrs. Davis,104,1,1
+Monday,5,Physical Education,Mr. Wilson,Gym,1,1
+Tuesday,1,Thai Language,Ms. Somchai,105,1,1
+Tuesday,2,Mathematics,Mr. Smith,101,1,1
+Tuesday,3,Computer Science,Dr. Lee,Lab1,1,1
+Tuesday,4,Arts,Ms. Wang,Art Room,1,1
+Tuesday,5,English,Ms. Johnson,102,1,1
+Wednesday,1,Science,Dr. Brown,103,1,1
+Wednesday,2,Social Studies,Mr. Garcia,106,1,1
+Wednesday,3,Mathematics,Mr. Smith,101,1,1
+Wednesday,4,Reading,Mrs. Rodriguez,Library,1,1
+Wednesday,5,Music,Mr. Taylor,Music Room,1,1
+Thursday,1,English,Ms. Johnson,102,1,1
+Thursday,2,Thai Language,Ms. Somchai,105,1,1
+Thursday,3,Health Education,Dr. Miller,107,1,1
+Thursday,4,Science Lab,Dr. Brown,Lab2,1,1
+Thursday,5,Mathematics,Mr. Smith,101,1,1
+Friday,1,Arts,Ms. Wang,Art Room,1,1
+Friday,2,Physical Education,Mr. Wilson,Gym,1,1
+Friday,3,English,Ms. Johnson,102,1,1
+Friday,4,Mathematics,Mr. Smith,101,1,1
+Friday,5,Club Activities,Various,Various,1,1
+Monday,1,Science,Ms. Clark,201,1,2
+Monday,2,Mathematics,Mr. Thomas,202,1,2
+Monday,3,English,Ms. White,203,1,2
+Monday,4,Thai Language,Mr. Pongsak,204,1,2
+Monday,5,Physical Education,Mrs. Hall,Gym,1,2
+Monday,1,Mathematics,Dr. Anderson,301,2,1
+Monday,2,Chemistry,Ms. Martinez,Lab3,2,1
+Monday,3,English Literature,Mr. Robinson,302,2,1
+Monday,4,History,Dr. Scott,303,2,1
+Monday,5,Computer Science,Ms. Turner,Lab1,2,1
+Monday,1,Physics,Dr. Thompson,401,4,1
+Monday,2,Advanced Mathematics,Ms. Parker,402,4,1
+Monday,3,English,Mr. Nelson,403,4,1
+Monday,4,Social Science,Dr. Baker,404,4,1
+Monday,5,Thai Language,Mrs. Siriwan,405,4,1
