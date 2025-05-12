@@ -181,35 +181,53 @@ export default function TimetablePage() {
       )}
       
       {data && (
-        <div className="mb-6" id="timetableContainer">
-          <div className="text-center mb-4">
+        <div className="mb-6" id="timetableContainer">          <div className="text-center mb-4">
             <h1 className="text-2xl font-bold">ตารางเรียน</h1>
-            <h3 className="text-lg">ภาคเรียนที่ 2 ปีการศึกษา 2567</h3>
-            <h3 className="text-lg mt-2">ชั้น ม.{data.grade}/{data.classNumber}</h3>
+            <h3 className="text-lg">
+              {data.semester ? data.semester : 'ภาคเรียนที่ 2 ปีการศึกษา 2567'}
+            </h3>
+            <h3 className="text-lg mt-2">
+              ชั้น ม.{data.grade}/{data.classNumber}
+              {data.program && <span className="ml-2">({data.program})</span>}
+            </h3>
+            {data.school && <h4 className="text-md mt-1">{data.school}</h4>}
           </div>
           
           <div className="table-responsive">
-            <table className="w-full border-collapse" id="timetable">
-              <thead className="bg-black">
+            <table className="w-full border-collapse" id="timetable">              <thead className="bg-black">
                 <tr>
                   <th className="border p-2">คาบ</th>
-                  <th className="border p-2">0<br/>08:15-08:40</th>
-                  <th className="border p-2">1<br/>08:40-09:30</th>
-                  <th className="border p-2">2<br/>09:35-10:25</th>
-                  <th className="border p-2">3<br/>10:30-11:20</th>
-                  <th className="border p-2">4<br/>11:25-12:15</th>
-                  <th className="border p-2">5<br/>12:20-13:10</th>
-                  <th className="border p-2">6<br/>13:15-14:05</th>
-                  <th className="border p-2">7<br/>14:10-15:00</th>
-                  <th className="border p-2">8<br/>15:05-15:55</th>
-                  <th className="border p-2">9<br/>16:00-16:50</th>
+                  {data.periods ? (
+                    // Use periods from the API response if available
+                    data.periods.map((period, index) => (
+                      <th key={index} className="border p-2">
+                        {index}<br/>{period}
+                      </th>
+                    ))
+                  ) : (
+                    // Fall back to default periods
+                    <>
+                      <th className="border p-2">0<br/>08:15-08:40</th>
+                      <th className="border p-2">1<br/>08:40-09:30</th>
+                      <th className="border p-2">2<br/>09:35-10:25</th>
+                      <th className="border p-2">3<br/>10:30-11:20</th>
+                      <th className="border p-2">4<br/>11:25-12:15</th>
+                      <th className="border p-2">5<br/>12:20-13:10</th>
+                      <th className="border p-2">6<br/>13:15-14:05</th>
+                      <th className="border p-2">7<br/>14:10-15:00</th>
+                      <th className="border p-2">8<br/>15:05-15:55</th>
+                      <th className="border p-2">9<br/>16:00-16:50</th>
+                    </>
+                  )}
                 </tr>
               </thead>
-              <tbody>
-                {Object.entries(data.timetable).map(([day, periods]) => (
+              <tbody>                {Object.entries(data.timetable).map(([day, periods]) => (
                   <tr key={day} className="hover:bg-gray-50">
-                    <td className="border p-2 font-semibold">{day}</td>                    {Array.from({ length: 10 }, (_, i) => {                      // Convert the array index to a number matching the period
+                    <td className="border p-2 font-semibold">{day}</td>
+                    {Array.from({ length: data.periods?.length || 10 }, (_, i) => {
+                      // Convert the array index to a number matching the period
                       const period = periods.find(p => p.period === i);
+                      
                       return (
                         <td key={i} className="border p-2 text-center">
                           {period ? (

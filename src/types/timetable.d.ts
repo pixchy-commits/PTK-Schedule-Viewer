@@ -8,6 +8,24 @@ export interface TimetableEntry {
   room: string;
 }
 
+// JSON timetable format
+export interface TimetablePeriodJson {
+  subject: string;
+  teacher: string;
+  room: string;
+}
+
+export interface TimetableJsonData {
+  class: string;
+  program: string;
+  semester: string;
+  school: string;
+  periods: string[];
+  days: {
+    [day: string]: (TimetablePeriodJson | string | null)[];
+  };
+}
+
 export interface TimetableByDayResponse {
   [day: string]: TimetableEntry[];
 }
@@ -16,6 +34,11 @@ export interface TimetableResponse {
   grade: number;
   classNumber: number;
   timetable: TimetableByDayResponse;
+  // Additional properties from JSON file
+  semester?: string;
+  school?: string;
+  program?: string;
+  periods?: string[];
 }
 
 export interface ValidationResponse {

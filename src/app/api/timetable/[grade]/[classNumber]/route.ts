@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getTimetableForClass } from "@/utils/csvParser";
+import { getTimetableForClass } from "@/utils/csvParser"; // Keep for backwards compatibility
+import { getTimetableJsonForClass, convertJsonToTimetableResponse } from "@/utils/jsonParser";
 import { validateTimetableParams } from "@/utils/validation";
 import { TimetableEntry, TimetableByDayResponse } from "@/types/timetable";
 import path from "path";
@@ -25,17 +26,39 @@ export async function GET(
       { status: 400 }
     );
   }
-
-  // Check if timetable file exists
-  const filePath = path.join(process.cwd(), 'public', 'timetables', 'mocking.csv');
-  if (!fs.existsSync(filePath)) {
+  // Check if JSON timetable file exists
+  const jsonFilePath = path.join(process.cwd(), 'public', 'timetables', 'timetable.json');
+  
+  // Try to get data from JSON first, fall back to CSV if needed
+  if (fs.existsSync(jsonFilePath)) {
+    const timetableJson = getTimetableJsonForClass(grade, classNumber);
+    
+    if (timetableJson) {
+      // Convert JSON data to API response format
+      const formattedData = convertJsonToTimetableResponse(timetableJson);
+      
+      return NextResponse.json({
+        grade,
+        classNumber,
+        timetable: formattedData,
+        semester: timetableJson.semester,
+        school: timetableJson.school,
+        program: timetableJson.program,
+        periods: timetableJson.periods
+      });
+    }
+  }
+  
+  // Fall back to CSV if JSON doesn't exist or doesn't have data for this grade/class
+  const csvFilePath = path.join(process.cwd(), 'public', 'timetables', 'mocking.csv');
+  if (!fs.existsSync(csvFilePath)) {
     return NextResponse.json(
       { error: "Timetable data not found" }, 
       { status: 404 }
     );
   }
 
-  // Get timetable data
+  // Get timetable data from CSV
   const timetableData = getTimetableForClass(grade, classNumber);
   
   if (!timetableData || timetableData.data.length === 0) {
@@ -48,7 +71,7 @@ export async function GET(
     );
   }
 
-  // Format timetable data for response
+  // Format CSV timetable data for response
   const formattedData = formatTimetableResponse(timetableData.data);
 
   return NextResponse.json({

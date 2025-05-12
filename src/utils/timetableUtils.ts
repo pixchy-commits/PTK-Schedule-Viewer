@@ -65,12 +65,29 @@ function generateTimetableSummary(timetableByDay: TimetableByDayResponse): Timet
  * Function to export timetable data to CSV format
  */
 export function exportTimetableToCSV(timetable: TimetableResponse): string {
-  const { grade, classNumber, timetable: timetableByDay } = timetable;
-  let csv = 'day,period,subject,teacher,room,grade,class\n';
+  const { grade, classNumber, timetable: timetableByDay, semester, school, program } = timetable;
   
+  // Create CSV header with additional metadata fields
+  let csv = 'day,period,subject,teacher,room,grade,class';
+  if (semester) csv += ',semester';
+  if (school) csv += ',school';
+  if (program) csv += ',program';
+  csv += '\n';
+  
+  // Include the period time information if available
+  let periodInfo = '';
+  if (timetable.periods && timetable.periods.length > 0) {
+    periodInfo = timetable.periods.join(',');
+  }
+
+  // Add the timetable data rows
   Object.entries(timetableByDay).forEach(([day, periods]) => {
     periods.forEach((period: TimetableEntry) => {
-      csv += `${day},${period.period},${period.subject},${period.teacher},${period.room},${grade},${classNumber}\n`;
+      let row = `${day},${period.period},${period.subject},${period.teacher},${period.room},${grade},${classNumber}`;
+      if (semester) row += `,${semester}`;
+      if (school) row += `,${school}`;
+      if (program) row += `,${program}`;
+      csv += row + '\n';
     });
   });
   

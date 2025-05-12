@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { parseCSV } from "@/utils/csvParser";
-// import { TimetableOverviewResponse } from "@/types/timetable";
+import { parseTimetableJson, extractGradeAndClass } from "@/utils/jsonParser";
+import { TimetableOverviewResponse, TimetableJsonData } from "@/types/timetable";
 import path from "path";
 import fs from "fs";
 
@@ -9,9 +10,45 @@ import fs from "fs";
  * Route: /api/timetable
  */
 export async function GET() {
-  // Check if timetable file exists
-  const filePath = path.join(process.cwd(), 'public', 'timetables', 'mocking.csv');
-  if (!fs.existsSync(filePath)) {
+  // First try to get data from JSON
+  const jsonFilePath = path.join(process.cwd(), 'public', 'timetables', 'timetable.json');
+  if (fs.existsSync(jsonFilePath)) {
+    const timetableData = parseTimetableJson(jsonFilePath);
+    
+    if (timetableData) {
+      // Extract grade and class info
+      const classInfo = extractGradeAndClass(timetableData.class);
+      
+      if (classInfo) {
+        const gradeClassMap: Record<string, number[]> = {};
+        const { grade, classNumber } = classInfo;
+        
+        // Add the class to the grade map
+        gradeClassMap[grade] = [classNumber];
+        
+        // Return overview with JSON data
+        return NextResponse.json({
+          availableGrades: [grade],
+          gradeClassMap,
+          school: timetableData.school,
+          semester: timetableData.semester,
+          program: timetableData.program,
+          juniorHighSchool: {
+            grades: [1, 2, 3],
+            classesPerGrade: 17
+          },
+          seniorHighSchool: {
+            grades: [4, 5, 6],
+            classesPerGrade: 16
+          }
+        });
+      }
+    }
+  }
+
+  // Fall back to CSV if JSON doesn't exist or is invalid
+  const csvFilePath = path.join(process.cwd(), 'public', 'timetables', 'mocking.csv');
+  if (!fs.existsSync(csvFilePath)) {
     return NextResponse.json(
       { error: "Timetable data not found" }, 
       { status: 404 }
@@ -19,7 +56,7 @@ export async function GET() {
   }
 
   // Parse CSV to get all data
-  const timetableData = parseCSV(filePath);
+  const timetableData = parseCSV(csvFilePath);
   
   // Extract unique grade-class combinations
   const gradeClassMap: Record<string, number[]> = {};
