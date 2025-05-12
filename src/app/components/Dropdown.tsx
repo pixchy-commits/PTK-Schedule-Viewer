@@ -32,7 +32,9 @@ export default function Dropdown({
           {/* Control styling - using rgba directly */}
           <Listbox.Button className="relative w-full cursor-default rounded-lg bg-[rgba(0,0,0,0.25)] backdrop-blur-sm border border-[rgba(255,255,255,0.25)] py-3 px-4 text-left text-white shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-800 sm:text-sm">
             {/* Single value styling */}
-            <span className="block truncate text-left text-white">{selected.name}</span>
+            <span className="block truncate text-left text-white">
+              {selected.name}
+            </span>
             <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
               <ChevronUpDownIcon
                 className="h-5 w-5 text-gray-400"

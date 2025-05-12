@@ -19,7 +19,7 @@ export default function Home() {
 
   const [selectedGrade, setSelectedGrade] = useState(grades[0]);
   const [selectedRoom, setSelectedRoom] = useState(rooms[0]);
-  
+
   const currentYear = new Date().getFullYear();
 
   return (
@@ -72,15 +72,15 @@ export default function Home() {
             ค้นหา
           </button>
         </div>
-        
+
         {/* MIT License Copyright */}
-        <div className="mt-12 text-xs text-white opacity-50">
-          <p>สงวนลิขสิทธิ์ © {currentYear}</p>
+        <div className="mt-12 text-xs font-light text-white opacity-50">
+          <p>สงวนลิขสิทธิ์ PTK TechCommu © {currentYear}</p>
           <p className="mt-1">
-            ซอร์สโค้ดเผยแพร่ภายใต้สัญญาอนุญาต {" "}
-            <a 
-              href="https://opensource.org/licenses/MIT" 
-              target="_blank" 
+            ซอร์สโค้ดเผยแพร่ภายใต้สัญญาอนุญาต{" "}
+            <a
+              href="https://opensource.org/licenses/MIT"
+              target="_blank"
               rel="noopener noreferrer"
               className="underline hover:text-white hover:opacity-75 transition-opacity"
             >
