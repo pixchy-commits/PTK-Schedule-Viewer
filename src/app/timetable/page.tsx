@@ -1,5 +1,6 @@
 "use client";
 
+<<<<<<< HEAD
 import { useState } from "react";
 import Image from "next/image";
 import { useTimetableWithRefetch } from "@/hooks/useTimetable";
@@ -9,6 +10,14 @@ import {
   exportTimetableToCSV,
 } from "@/utils/timetableUtils";
 import html2canvas from "html2canvas";
+=======
+import { useState } from 'react';
+// import Image from 'next/image';
+import { useTimetableWithRefetch } from '@/hooks/useTimetable';
+import { timetableService } from '@/services/timetableService';
+import { fetchAndProcessTimetableData, exportTimetableToCSV } from '@/utils/timetableUtils';
+import html2canvas from 'html2canvas';
+>>>>>>> 145e7d7be8be4076c38dcd8457721b269f2259d7
 
 export default function TimetablePage() {
   const [grade, setGrade] = useState<number>(1);
