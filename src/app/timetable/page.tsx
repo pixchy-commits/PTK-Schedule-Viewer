@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react';
-import Image from 'next/image';
+// import Image from 'next/image';
 import { useTimetableWithRefetch } from '@/hooks/useTimetable';
 import { timetableService } from '@/services/timetableService';
 import { fetchAndProcessTimetableData, exportTimetableToCSV } from '@/utils/timetableUtils';
