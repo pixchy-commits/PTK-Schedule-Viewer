@@ -1,17 +1,17 @@
-import { 
-  ApiEndpoints, 
-  TimetableService, 
+import {
+  ApiEndpoints,
+  TimetableService,
   TimetableResponse,
   TimetableOverviewResponse,
-  ValidationResponse
-} from '@/types/timetable';
+  ValidationResponse,
+} from "@/types/timetable";
 
 // API endpoints
 export const API_ENDPOINTS: ApiEndpoints = {
-  TIMETABLE_BASE: '/api/timetable',
-  TIMETABLE_BY_GRADE_CLASS: (grade: number, classNumber: number) => 
+  TIMETABLE_BASE: "/api/timetable",
+  TIMETABLE_BY_GRADE_CLASS: (grade: number, classNumber: number) =>
     `/api/timetable/${grade}/${classNumber}`,
-  VALIDATE_GRADE_CLASS: (grade: number, classNumber: number) => 
+  VALIDATE_GRADE_CLASS: (grade: number, classNumber: number) =>
     `/api/validate/${grade}/${classNumber}`,
 };
 
@@ -24,37 +24,47 @@ export const timetableService: TimetableService = {
    */
   getTimetableOverview: async (): Promise<TimetableOverviewResponse> => {
     const response = await fetch(API_ENDPOINTS.TIMETABLE_BASE);
-    
+
     if (!response.ok) {
       throw new Error(`Failed to fetch overview: ${response.statusText}`);
     }
-    
+
     return await response.json();
   },
 
   /**
    * Get timetable for a specific grade and class
    */
-  getTimetableByGradeAndClass: async (grade: number, classNumber: number): Promise<TimetableResponse> => {
-    const response = await fetch(API_ENDPOINTS.TIMETABLE_BY_GRADE_CLASS(grade, classNumber));
-    
+  getTimetableByGradeAndClass: async (
+    grade: number,
+    classNumber: number
+  ): Promise<TimetableResponse> => {
+    const response = await fetch(
+      API_ENDPOINTS.TIMETABLE_BY_GRADE_CLASS(grade, classNumber)
+    );
+
     if (!response.ok) {
       throw new Error(`Failed to fetch timetable: ${response.statusText}`);
     }
-    
+
     return await response.json();
   },
 
   /**
    * Validate if a grade and class combination is valid
    */
-  validateGradeAndClass: async (grade: number, classNumber: number): Promise<ValidationResponse> => {
-    const response = await fetch(API_ENDPOINTS.VALIDATE_GRADE_CLASS(grade, classNumber));
-    
+  validateGradeAndClass: async (
+    grade: number,
+    classNumber: number
+  ): Promise<ValidationResponse> => {
+    const response = await fetch(
+      API_ENDPOINTS.VALIDATE_GRADE_CLASS(grade, classNumber)
+    );
+
     if (!response.ok) {
       throw new Error(`Validation request failed: ${response.statusText}`);
     }
-    
+
     return await response.json();
-  }
+  },
 };
