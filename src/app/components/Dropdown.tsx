@@ -20,15 +20,15 @@ export default function Dropdown({
   selected,
   onChange,
 }: DropdownProps) {
-  const currentDate = new Date().toISOString().split('T')[0];
-  
   return (
     <div className="w-full text-left">
       <Listbox value={selected} onChange={onChange}>
         <div className="relative">
-          <Listbox.Label className="block text-sm font-medium text-gray-300 mb-2 text-left">
-            {label}
-          </Listbox.Label>
+          {label && (
+            <Listbox.Label className="block text-sm font-medium text-gray-300 mb-2 text-left">
+              {label}
+            </Listbox.Label>
+          )}
           {/* Control styling - using rgba directly */}
           <Listbox.Button className="relative w-full cursor-default rounded-lg bg-[rgba(0,0,0,0.25)] backdrop-blur-sm border border-[rgba(255,255,255,0.25)] py-3 px-4 text-left text-white shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-800 sm:text-sm">
             {/* Single value styling */}
